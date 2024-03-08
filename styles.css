@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #141414;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+/* Nuevos estilos para el título y la descripción */
+.main-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-content .description {
+    font-size: 1.2em;
+    color: #555; /* Puedes ajustar el color según tus preferencias */
+    margin-bottom: 20px;
+}
+
+/* Estilos para el catálogo de series */
+.series-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.series-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.series-item img {
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: 225px; /* Ajusta el tamaño según tus necesidades */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.series-item img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
