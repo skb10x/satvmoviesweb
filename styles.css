@@ -2,19 +2,22 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000;
+    color: #fff;
 }
 
 header {
-    background: #141414;
-    color: #fff;
-    padding: 10px;
+    background: transparent;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
+    color: #e50914; /* Rojo característico de Netflix */
 }
 
 nav ul {
@@ -25,6 +28,8 @@ nav ul {
 nav ul li {
     margin-right: 20px;
     cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .main-content {
@@ -33,14 +38,15 @@ nav ul li {
 
 /* Nuevos estilos para el título y la descripción */
 .main-content h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
 .main-content .description {
-    font-size: 1.2em;
-    color: #555; /* Puedes ajustar el color según tus preferencias */
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ccc;
+    margin-bottom: 30px;
 }
 
 /* Estilos para el catálogo de series */
@@ -50,13 +56,13 @@ nav ul li {
 }
 
 .series-item {
-    margin: 10px;
+    margin: 20px;
     text-align: center;
 }
 
 .series-item img {
-    width: 150px; /* Ajusta el tamaño según tus necesidades */
-    height: 225px; /* Ajusta el tamaño según tus necesidades */
+    width: 200px;
+    height: 300px;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -66,10 +72,10 @@ nav ul li {
 }
 
 footer {
-    background: #000;
-    color: #fff;
+    background: #141414;
+    color: #ccc;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
