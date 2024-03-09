@@ -22,23 +22,44 @@
     <section class="main-content">
         <h1>Destacados</h1>
         <div class="catalog">
-            <!-- Ejemplo de una serie en el catálogo -->
             <div class="catalog-item">
-                <img src="thumbnail1.jpg" alt="Serie 1">
-                <p>Reite666 (SERIE)</p>
-            </div>
-
-            <div class="catalog-item">
-                <img src="thumbnail2.jpg" alt="Serie 2">
+                <button class="movie-button" onclick="playMovie('https://www.youtube.com/embed/VIDEO_ID')">
+                    <img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula">
+                </button>
                 <p>Matias Ponce - La Pelicula</p>
+                <video class="trailer-video" loop muted>
+                    <source src="trailer.mp4" type="video/mp4"> <!-- Reemplaza con la ruta de tu propio trailer -->
+                    Tu navegador no soporta el elemento de video.
+                </video>
             </div>
-
-            <!-- Puedes agregar más series según sea necesario -->
+            <!-- Otros elementos del catálogo aquí -->
         </div>
     </section>
 
     <footer>
         <p>Sol Argentino TV © 2021 - 2024 | Sol Argentino TV MOVIES © 2024</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const movieButtons = document.querySelectorAll('.movie-button');
+
+            movieButtons.forEach(button => {
+                const trailerVideo = button.nextElementSibling; // Elemento de video siguiente al botón
+                button.addEventListener('mouseover', () => {
+                    trailerVideo.style.display = 'block';
+                    trailerVideo.play();
+                    button.style.opacity = 0.5; // Puedes ajustar la opacidad del botón según sea necesario
+                });
+
+                button.addEventListener('mouseout', () => {
+                    trailerVideo.pause();
+                    trailerVideo.currentTime = 0;
+                    trailerVideo.style.display = 'none';
+                    button.style.opacity = 1;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
