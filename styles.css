@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000;
-    color: #000;
+    color: #fff;
 }
 
 header {
@@ -50,28 +50,48 @@ nav ul li {
 }
 
 /* Estilos para el catálogo de series */
-.series-container {
+.catalog {
     display: flex;
     flex-wrap: wrap;
 }
 
-.series-item {
+.catalog-item {
     margin: 20px;
     text-align: center;
+    position: relative;
 }
 
-.series-item img {
-    width: 200px;
-    height: 300px;
+.movie-button {
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
     transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.series-item img:hover {
+.movie-button::before {
+    content: '\25B6'; /* Símbolo de reproducción Unicode */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.movie-button:hover {
     transform: scale(1.1);
 }
 
-footer {
+.trailer-video {
+    display: none;
+    width: 100%;
+}
+
+.footer {
     background: #141414;
     color: #ccc;
     text-align: center;
