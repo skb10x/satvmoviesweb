@@ -1,102 +1,300 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Netflix Sans', sans-serif;
     background-color: #000;
     color: #fff;
 }
 
 header {
-    background: transparent;
-    padding: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #181818;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-    font-size: 2em;
+    font-size: 24px;
     font-weight: bold;
-    color: #e50914; /* Rojo característico de Netflix */
+}
+
+.description {
+    font-size: 16px;
+    color: #ccc;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
+    justify-content: flex-end;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin: 0 15px;
     cursor: pointer;
-    font-size: 1.2em;
-    font-weight: bold;
 }
 
-.main-content {
+section.main-content {
     padding: 20px;
 }
 
-/* Nuevos estilos para el título y la descripción */
-.main-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+h1 {
     color: #fff;
 }
 
-.main-content .description {
-    font-size: 1.5em;
-    color: #ccc;
-    margin-bottom: 30px;
+.modal-open {
+  overflow: hidden; /* Desactiva el scroll */
 }
 
-/* Estilos para el catálogo de series */
+.modal-open .catalog-item {
+  pointer-events: none; /* Desactiva la interacción con otros items */
+}
+
+.modal-open .modal {
+  pointer-events: auto; /* Mantiene la interacción dentro del modal */
+}
+
 .catalog {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    border-radius: 7px;
+    margin: 20px auto; /* Centramos el contenido de forma más robusta en todos los navegadores */
 }
 
 .catalog-item {
-    margin: 20px;
-    text-align: center;
-    position: relative;
+    margin: 10px;
+    display: inline-block; /* Mantener inline-block para imágenes individuales */
+    flex: 0 0 auto;
+    margin-left: -440px;
+    /* Eliminamos márgenes negativos excesivos */
 }
 
-.movie-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: transform 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.movie-button::before {
-    content: '\25B6'; /* Símbolo de reproducción Unicode */
+.catalog-item.Reite666 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    color: #fff;
-    opacity: 0.8;
+    margin-left: -700px; /* Este margen negativo podría causar problemas, sugiero probar con un valor menor */
+    height: 172.78px;
 }
 
-.movie-button:hover {
+#catalog-app {
+    width: 300px;
+    position: absolute;
+    margin-left: -210px; /* Márgenes negativos pueden desalinear el layout */
+}
+
+#catalog-matiponcepeli.catalog-item img {
+    width: 300px;
+    position: absolute;
+    margin-left: -760px; /* Márgenes negativos pueden desalinear el layout */
+}
+
+.catalog-item img {
+    cursor: pointer;
+    width: 100%;
+    height: 172.78px;
+    transition: transform 0.2s;
+    border-radius: 5px;
+    object-fit: cover; /* Para que las imágenes no se deformen al escalar */
+}
+
+.catalog-item.Reite666 img {
+    cursor: pointer;
+    width: 24%;
+    height: auto;
+    transition: transform 0.2s;
+    position: absolute;
+    object-fit: cover; /* Aseguramos proporciones correctas */
+}
+
+.catalog-item img:hover {
     transform: scale(1.1);
 }
 
-.trailer-video {
+
+
+.modal {
     display: none;
+    position: fixed;
+    left: 0;
     width: 100%;
+    height: calc(100% - 100px); /* Ajustar para que no cubra el footer */
+    max-height: 1060px;
+    pointer-events: none;
+    max-width: 1920px;
+    background-color: rgb(0 0 0 / 70%);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    pointer-events: auto;
+  }
+  
+  footer {
+    position: relative;
+    z-index: 1100; /* Mayor que el modal */
+  }  
+
+.modal open {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    max-height: 1060px;
+    pointer-events: none;
+    max-width: 1920px;
+    background-color: rgb(0 0 0 / 70%);
 }
 
-.footer {
-    background: #141414;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
+.modal-content {
+  position: fixed;
+  width: 100%;
+  max-width: 810px;
+  background-color: #181818;
+  border-radius: 2px;
+}
+
+.modal p {
+	text-align: justify;
+	padding: 20px;
+	line-height: 1.7;
+}
+
+.modal-content {
+  top: 30px;
+  left: 30%;
+  width: 50.9375em;
+  height: 87%;
+  max-height: 900px;
+  border-radius: 6px;
+}
+
+/* Ocultar scrollbars en Mozilla Firefox */
+html, body {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Para Webkit (Chrome, Safari, Edge) */
+html::-webkit-scrollbar {
+    display: none; /* Ocultar scrollbar en WebKit */
+}
+
+/* Opcional: Elimina el espacio del scrollbar en Webkit */
+html {
+    overflow: hidden; /* Opción alternativa si quieres desactivar completamente el scroll */
+}
+
+
+#catalog-matiponcepeli.catalog-item img {
+	element.style {
+    position: absolute;
+    left: 730px;
+}
+
+#dplayer {
+    width: 80%;
+    position: relative;
+    left: -4%;
+	top: -18px;
+}
+
+.dplayer-controller {
+    display: none !important;
+}
+
+.synopsis-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 1;
+	padding-right: 30px;
+}
+
+.synopsis {
+    text-align: justify;
+    margin-top: 20px;
+	padding-right: 250px;
+    padding-left: 20px;
+	top: 28.7em;
+	position: absolute;
+}
+
+.synopsis p {
+	margin-left: 20px;
+	margin-right: 80px;
+	padding: 20px;
+	font-size: 15px;
+	text-align: justify;
+	position: relative;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.episodie-count {
+    padding: 0;
+}
+
+.play-button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+	position: relative;
+    left: -350px;
+}
+
+.episode-count {
+    top: -26px;
+    position: relative;
+    right: -350px;
+}
+
+.play-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+span {
+    color: #555;
+    font-size: 12px;
+}
+
+.single-line p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.single-line {
+    top: 250px;
+    left: 600px;
+    position: absolute;
+}
+
+footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+    padding: 10px;
+	padding-top: 10px;
+    box-sizing: border-box;
+    margin: 0;
 }
+
+#contenedordatos {
+  padding-right: 10px;
+  }

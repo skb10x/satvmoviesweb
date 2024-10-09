@@ -1,65 +1,1428 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol Argentino TV MOVIES</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sol Argentino TV MOVIES</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+  <style>
+	p {
+	    line-height: 1.2;
+	}
+	
+	.modal-content {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.modal-content::-webkit-scrollbar {
+		background: #ffffff00;
+		width: 0px;
+	}
+
+	span {
+		color: #777;
+		font-size: 14px;
+		margin-right: 4px;
+	}
+	.single-line p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+	}
+	.single-line {
+		top: 650px;
+		left: 550px;
+		position: absolute;
+		padding: 0px;
+	}
+.synopsis {
+    text-align: justify;
+    margin-top: 45px;
+    font-size: 15px;
+    padding-right: 20em;
+    padding-left: 20px;
+	top: 28.7em;
+	position: absolute;
+}
+
+@supports (-moz-appearance: none) {
+.synopsis {
+    text-align: justify;
+    margin-top: 45px;
+    font-size: 15px;
+    padding-right: 20em;
+    padding-left: 20px;
+	top: 28.7em;
+	position: absolute;
+	transform: translateY(-3.6em);
+	}
+}
+
+	#singlelineapp {
+		top: 31em;
+		left: 32em;
+		position: absolute;
+		padding-right: 2.375em;
+		line-height: 1.2;
+	}
+	#singlelineapp p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelineapp2 {
+		top: 35.5625em;
+		left: 32em;
+		position: absolute;
+		padding-right: 2.375em;
+		line-height: 1.2;
+		line-height: 1.2;
+	}
+	#singlelineapp2 p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelineapp3 a {
+		background: transparent;
+		/* Fondo transparente */
+		font-style: italic;
+		/* Texto en cursiva */
+		border: none;
+		/* Opcional: quita el borde del botón */
+		font-size: 14px;
+		color: #fff;
+		/* Opcional: color del texto del botón */
+		cursor: pointer;
+		/* Opcional: cambia el cursor al pasar sobre el botón */
+		text-decoration: none;
+	}
+	#singlelinereite {
+    top: 5.7em;
+    left: 18em;
+    position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-2.7em);
+	}
+	#singlelinereite p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelinereite2 {
+	top: 6.2em;
+    left: 18em;
+	position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-2.8em);
+	}
+	#singlelinereite2 p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelinereite3 {
+    top: -2.1em;
+    left: 18em;
+    position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-5em);
+	}
+	#singlelinereite3 p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelinereite3 a {
+		background: transparent;
+		/* Fondo transparente */
+		font-style: italic;
+		/* Texto en cursiva */
+		border: none;
+		/* Opcional: quita el borde del botón */
+		font-size: 14px;
+		color: #fff;
+		/* Opcional: color del texto del botón */
+		cursor: pointer;
+		/* Opcional: cambia el cursor al pasar sobre el botón */
+		text-decoration: none;
+	}
+	#singlelinereite3 a:hover {
+		text-decoration: underline;
+		/* Aplica subrayado en hover */
+		text-decoration-color: #fff;
+		/* Color del subrayado en hover */
+	}
+
+	@supports (-moz-appearance: none) {
+	#singlelinereite {
+    top: 5.7em;
+    left: 18em;
+    position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-3.6em);
+	}
+	#singlelinereite2 {
+	top: 6.2em;
+    left: 18em;
+	position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-3.6em);
+	}
+	#singlelinereite3 {
+    top: -2.1em;
+    left: 18em;
+    position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-2.4em);
+	}
+}
+	#singlelinemati {
+    top: 4.5em;
+    left: 18em;
+    position: relative;
+    padding-right: 20em;
+    margin-left: 12em;
+    line-height: 1.2;
+	}
+	#singlelinemati p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelinemati2 {
+	top: 5.1em;
+    left: 18em;
+	position: relative;
+    padding-right: 20em;
+    margin-left: 12em;
+    line-height: 1.2;
+	transform: translateY(0em);
+	}
+	#singlelinemati2 p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelinemati3 {
+    top: -2.2em;
+    left: 18em;
+    position: relative;
+    padding-right: 20em;
+    margin-left: 12em;
+    line-height: 1.2;
+	transform: translateY(-1em);
+}
+	#singlelinemati3 p {
+		color: #fff;
+		font-size: 14px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	#singlelinemati3 a {
+		background: transparent;
+		/* Fondo transparente */
+		font-style: italic;
+		/* Texto en cursiva */
+		border: none;
+		/* Opcional: quita el borde del botón */
+		font-size: 14px;
+		color: #fff;
+		/* Opcional: color del texto del botón */
+		cursor: pointer;
+		/* Opcional: cambia el cursor al pasar sobre el botón */
+		text-decoration: none;
+	}
+	#singlelinemati3 a:hover {
+		text-decoration: underline;
+		/* Aplica subrayado en hover */
+		text-decoration-color: #fff;
+		/* Color del subrayado en hover */
+	}
+	@supports (-moz-appearance: none) {
+	#singlelinemati {
+    top: 5.7em;
+    left: 18em;
+    position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-1em);
+	}
+	#singlelinemati2 {
+	top: 6.2em;
+    left: 18em;
+	position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-1em);
+	}
+	#singlelinemati3 {
+    top: -2.1em;
+    left: 18em;
+    position: relative;
+    padding-right: 21em;
+    margin-left: 15em;
+    line-height: 1.2;
+	transform: translateY(-1em);
+	}
+}
+	#endOfContent {
+		top: 4000px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+		padding-bottom: 20px;
+	}
+	#endOfContent p {
+		color: #fff;
+		top: 3000px;
+		font-size: 14px;
+		padding: 0px;
+	}
+	#endOfContent span {
+		top: 2px;
+	}
+	#endOfContent1 {
+		top: 4000px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+		padding-bottom: 20px;
+	}
+	#endOfContent1 p {
+		color: #fff;
+		top: 3000px;
+		font-size: 14px;
+		padding: 0px;
+	}
+	#endOfContent1 span {
+		top: 2px;
+	}
+	#endOfContent2024 {
+		top: 4000px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+		padding-bottom: 20px;
+	}
+	#endOfContent2024 p {
+		color: #fff;
+		top: 3000px;
+		font-size: 14px;
+		padding: 0px;
+	}
+	#endOfContent2024 span {
+		top: 2px;
+	}
+	#clasi {
+		top: 3925px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+	}
+	#clasi p {
+		color: #fff;
+		top: 3000px;
+		font-size: 14px;
+		padding: 0px;
+	}
+	#contenido {
+		top: 3950px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+	}
+	#contenido p {
+		color: #fff;
+		top: 3000px;
+		font-size: 14px;
+		padding: 0px;
+	}
+	#generos {
+		top: 3975px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+	}
+	#generos p {
+		color: #fff;
+		top: 3000px;
+		font-size: 14px;
+		padding: 0px;
+	}
+	#acerca {
+		top: 3840px;
+		left: 10px;
+		position: absolute;
+		padding: 0px;
+	}
+	h1::after {
+		content: "";
+		/* Necesario para mostrar el pseudo-elemento */
+		position: absolute;
+		/* Posiciona el pseudo-elemento en relación al h1 */
+		left: 0;
+		/* Ajusta la posición horizontal */
+		right: 0;
+		/* Ajusta la posición horizontal */
+		top: 50px;
+		/* Ajusta la distancia desde el borde inferior del h1 */
+		height: 3px;
+		/* Grosor de la línea */
+		background-color: #fff;
+		/* Color del subrayado */
+	}
+	.dplayer-controller {
+		display: none !important;
+	}
+	footer {
+		position: fixed;
+		/* Fija el footer en la parte inferior */
+		bottom: 0;
+		/* Pegado al pie de la página */
+		left: 0;
+		/* Alinea al borde izquierdo */
+		width: 100%;
+		/* Ocupa todo el ancho del viewport */
+		display: flex;
+		justify-content: center;
+		/* Centra el contenido horizontalmente */
+		align-items: center;
+		/* Centra el contenido verticalmente */
+		background: #181818;
+		/* Agrega un fondo para visibilidad (opcional) */
+		padding: 20px;
+		/* Espaciado interno (ajusta según sea necesario) */
+		box-sizing: border-box;
+		/* Incluye el padding y el border en el ancho total */
+		margin: 0;
+		/* Elimina el margen por defecto */
+	}
+	/* Estilo para desactivar interacciones con el DPlayer */
+	.dplayer {
+		pointer-events: none;
+		/* Desactiva todos los eventos del mouse */
+	}
+	/* Estilo para hacer los controles transparentes al pasar el mouse */
+	.dplayer .dplayer-controls {
+		opacity: 0.8;
+		/* Ajusta la opacidad por defecto */
+		transition: opacity 0.3s;
+		/* Transición suave */
+	}
+	.dplayer:hover .dplayer-controls {
+		opacity: 0.3;
+		/* Cambia la opacidad cuando el mouse está sobre el reproductor */
+	}
+	.play-link {
+		background-color: #fff;
+		color: #000;
+		border-radius: 5px;
+		padding: 10px 20px;
+		font-size: 23px;
+		font-weight: 600;
+		cursor: pointer;
+		display: flex;
+		/* Usar flexbox */
+		align-items: center;
+		/* Centrar verticalmente */
+		justify-content: center;
+		/* Centrar horizontalmente */
+		text-decoration: none;
+		/* Quitar subrayado del enlace */
+		border: none;
+		/* Sin borde */
+		text-align: center;
+		/* Alinear el texto al centro */
+		position: fixed;
+		top: 14em;
+		left: 3em;
+		box-sizing: border-box;
+		/* Incluir padding y border en el tamaño total del elemento */
+		z-index: 1000;
+	}
+	.play-link:hover {
+		background-color: #ddd;
+		color: #000;
+	}
+	.play-link svg {
+		width: 24px;
+		/* Tamaño del icono */
+		height: 24px;
+		/* Tamaño del icono */
+		fill: currentColor;
+		/* El color del icono será el mismo que el color del texto */
+		margin-right: 8px;
+		/* Espacio entre el icono y el texto */
+	}
+	.dplayer {
+		position: relative;
+	}
+	.dplayer::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		/* Ajusta el tamaño del degradado */
+		background: linear-gradient(0deg, #181818, transparent 50%);
+		pointer-events: none;
+		/* Permite hacer clic a través del degradado */
+	}
+	.single-line,
+	.play-link {
+		position: absolute;
+		z-index: 1000;
+		/* Asegúrate de que el elemento esté encima de otros contenidos */
+	}
+	/* Número de Temporadas */
+#clasi3 {
+	position: relative;
+	top: 34.5em;
+    left: 20px;
+    font-size: 14px;
+}
+
+#clasi1 {
+    position: absolute;
+    top: 34.68em; /* Ajustar la posición en lugar de usar valores negativos */
+    left: 1.5em;
+    font-size: 14px;
+}
+
+#numerotemps {
+    position: absolute;
+    font-size: 13.5px;
+    top: 3.45em;
+    left: 1em;
+    color: #bcbcbc;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Alinear contenido verticalmente si es necesario */
+    justify-content: flex-start; /* Alinear horizontalmente */
+    padding-left: 20px;
+}
+
+#añoserie span {
+    color: #bcbcbc;
+    font-size: 14px;
+    position: relative;
+    top: -13.7em;
+    left: -37.7em;
+    z-index: 1000;
+    padding-left: 20px;
+	margin-bottom: 0;
+}
+
+#numerotemps p {
+    color: #bcbcbc;
+	top: 28.5em;
+    left: 4em;
+	position: relative;
+	transform: translateY(-0em);
+}
+
+@supports (-moz-appearance: none) {
+	#numerotemps p {
+	color: #bcbcbc;
+	top: 28.5em;
+    left: 4em;
+	position: relative;
+	transform: translateY(-3.5em);
+	}
+
+	#añoserie span {
+    color: #bcbcbc;
+    font-size: 14px;
+    position: relative;
+    top: -13.7em;
+    left: -37.7em;
+    z-index: 1000;
+    padding-left: 20px;
+	margin-bottom: 0;
+	transform: translateY(-3.5em);
+	}
+
+	#añoserie {
+		z-index: 1000;
+		transform: translateY(-2.9em);
+	}
+
+	#clasi1 {
+		top: 31em;
+		position: relative;
+		font-size: 14px;
+		transform: translateY(-3.7em);
+	}
+
+}
+
+	#añoserie {
+		z-index: 1000;
+	}
+	#clas3 a {
+		border: 1px solid hsla(0, 0%, 100%, .4);
+		padding: 0.4em;
+		padding-bottom: 2px;
+		padding-top: 2px;
+		font-size: 12px;
+	}
+	#clasi3 a {
+		border: 1px solid hsla(0, 0%, 100%, .4);
+		padding: 0.4em;
+		padding-bottom: 1px;
+		padding-top: 1px;
+		text-align: center;
+		font-size: 12px;
+	}
+	#clasi1 a {
+		border: 1px solid hsla(0, 0%, 100%, .4);
+		padding: 0.4em;
+		padding-bottom: 1px;
+		padding-top: 1px;
+		text-align: center;
+		font-size: 12px;
+	}
+	.season-menu {
+		margin: 20px;
+		width: 300px;
+	}
+	.season-button {
+		width: 100%;
+		padding: 10px;
+		background-color: #FF00FF;
+		color: white;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	.episodes-list {
+		display: none;
+		margin-top: 10px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		border-radius: 5px;
+	}
+	.episode {
+		display: flex;
+		margin-bottom: 15px;
+	}
+	.episode img {
+		width: 100px;
+		height: auto;
+		border-radius: 5px;
+		margin-right: 10px;
+	}
+	.episode-info {
+		max-width: 170px;
+	}
+	.episode-info h2 {
+		font-size: 14px;
+		margin: 0;
+		margin-bottom: 5px;
+	}
+	.episode-info p {
+		font-size: 12px;
+		margin: 0;
+	}
+	.custom-select-container {
+		display: inline-block;
+		margin-left: 190px;
+	}
+	.custom-select {
+		margin-left: -2.375em;
+		width: 245px;
+		border: 2px solid #333;
+		background-color: #111;
+		color: #fff;
+		border-radius: 4px;
+		cursor: pointer;
+		height: 40px;
+		font-family: 'Netflix Sans', sans-serif;
+		position: relative;
+		/* Necesario para posicionar la flecha */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px;
+		/* Ajusta el padding según sea necesario */
+		box-sizing: border-box;
+		top: 0.2em;
+		font-weight: 500;
+		left: 22em;
+		z-index: 1000;
+	}
+	@supports (-moz-appearance: none) {
+		.custom-select {
+		margin-left: -2.375em;
+		width: 245px;
+		border: 2px solid #333;
+		background-color: #111;
+		color: #fff;
+		border-radius: 4px;
+		cursor: pointer;
+		height: 40px;
+		font-family: 'Netflix Sans', sans-serif;
+		position: relative;
+		/* Necesario para posicionar la flecha */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px;
+		/* Ajusta el padding según sea necesario */
+		box-sizing: border-box;
+		top: 0.2em;
+		font-weight: 500;
+		left: 22em;
+		z-index: 1000;
+		transform: translateY(-12em);
+		}
+	}
+	.selected-option {
+		white-space: nowrap;
+		/* Evita el salto de línea en la opción seleccionada */
+		overflow: hidden;
+		text-overflow: ellipsis;
+		/* Muestra '...' si el texto es demasiado largo */
+	}
+	.custom-options {
+		display: none;
+		width: 100%;
+		background-color: #111;
+		border: 2px solid #333;
+		border-radius: 0 0 4px 4px;
+		z-index: 1;
+		position: absolute;
+		/* Asegura que el dropdown se posicione correctamente */
+		top: 100%;
+		/* Coloca el dropdown justo debajo del select */
+		left: 0;
+		/* Alinea el dropdown con el select */
+	}
+	.custom-option {
+		padding: 10px;
+		color: #fff;
+		cursor: pointer;
+		white-space: normal;
+		/* Permite que el texto se ajuste a la línea */
+		overflow: visible;
+		/* Asegura que el texto sea visible */
+		text-overflow: unset;
+		/* Desactiva los '...' */
+		display: block;
+		/* Asegura que cada opción tenga su propia línea */
+	}
+	.custom-option:hover {
+		background-color: #333;
+	}
+	.custom-select.open .custom-options {
+		margin-left: -2px;
+		top: 45px;
+		border-radius: 3px;
+		display: grid;
+	}
+	.custom-select .arrow {
+		width: 24px;
+		height: 24px;
+		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>') no-repeat center;
+		background-size: 48px 36px;
+		/* Tamaño de la flecha */
+		transition: transform 0.3s ease;
+		transform: rotate(180deg);
+		/* Flecha apuntando hacia abajo por defecto */
+	}
+	.custom-select.open .arrow {
+		transform: rotate(0deg);
+		/* Rota la flecha para que apunte hacia arriba cuando el menú está abierto */
+	}
+	.menu-container {
+		position: relative;
+		/* Asegura que el contenido se mantenga dentro de este contenedor */
+	}
+	#episode-count-t1 {
+    top: -20em;
+    left: 10em;
+    color: #fff;
+    position: relative;
+    padding: 0; /* Remueve padding extra */
+    margin: 0;  /* Asegura que no haya margen */
+}
+#episode-count-t2 {
+    top: -2.4em;
+    left: 10em;
+    color: #fff;
+    position: relative;
+    padding: 0; /* Remueve padding extra */
+    margin: 0;  /* Asegura que no haya margen */
+}
+@supports (-moz-appearance: none) {
+    #episode-count-t1 {
+        top: 10px;
+        left: 10px;
+        color: #fff;
+        position: fixed;
+        padding: 0; /* Remueve padding extra */
+        margin: 0;  /* Asegura que no haya margen */
+    }
+    #episode-count-t2 {
+        top: 7em;
+        left: 9.5em;
+        color: #fff;
+        position: fixed;
+        padding: 0; /* Remueve padding extra */
+        margin: 0;  /* Asegura que no haya margen */
+    }
+}
+
+#episode-count {
+	margin: 0 auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center; /* Alinea el icono y el texto verticalmente */
+    font-family: 'Netflix Sans', sans-serif;
+    min-width: 4em;
+    left: 32.02em;
+    top: 0.2em;
+    position: relative;
+    font-size: 18px;
+    background-color: rgb(36, 36, 36);
+    padding: 0.45em 2em;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    border: 0.1em solid rgb(77, 77, 77);
+    border-radius: 3px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    right: 0;
+    width: 250px;
+    z-index: 1;
+    background-color: rgb(36, 36, 36);
+    border: 0.1em solid rgb(77, 77, 77);
+    margin-top: 0.1em;
+    max-height: max(10em, 396px - 2rem);
+    overflow: auto;
+    padding: inherit;
+    list-style-type: none;
+    font-family: 'Netflix Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: white;
+    left: 27.84em;
+    top: 0.35em;
+    user-select: none;
+    box-sizing: inherit;
+    white-space: nowrap;
+    column-gap: 1.8em;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+	padding: 10px 0.7em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo en hover */
+}
+
+	.season1,
+	.season2 {
+		position: fixed;
+	}
+	@supports (-moz-appearance: none) {
+		.custom-select-container {
+		display: inline-block;
+		margin-left: 190px;
+	}
+	.custom-select {
+		margin-left: -2.375em;
+		width: 245px;
+		border: 2px solid #333;
+		background-color: #111;
+		color: #fff;
+		border-radius: 4px;
+		cursor: pointer;
+		height: 40px;
+		font-family: 'Netflix Sans', sans-serif;
+		position: relative;
+		/* Necesario para posicionar la flecha */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px;
+		/* Ajusta el padding según sea necesario */
+		box-sizing: border-box;
+		top: 13em;
+		font-weight: 500;
+		left: 22em;
+		z-index: 1000;
+	}
+	.selected-option {
+		white-space: nowrap;
+		/* Evita el salto de línea en la opción seleccionada */
+		overflow: hidden;
+		text-overflow: ellipsis;
+		/* Muestra '...' si el texto es demasiado largo */
+	}
+	.custom-options {
+		display: none;
+		width: 100%;
+		background-color: #111;
+		border: 2px solid #333;
+		border-radius: 0 0 4px 4px;
+		z-index: 1;
+		position: absolute;
+		/* Asegura que el dropdown se posicione correctamente */
+		top: 100%;
+		/* Coloca el dropdown justo debajo del select */
+		left: 0;
+		/* Alinea el dropdown con el select */
+	}
+	.custom-option {
+		padding: 10px;
+		color: #fff;
+		cursor: pointer;
+		white-space: normal;
+		/* Permite que el texto se ajuste a la línea */
+		overflow: visible;
+		/* Asegura que el texto sea visible */
+		text-overflow: unset;
+		/* Desactiva los '...' */
+		display: block;
+		/* Asegura que cada opción tenga su propia línea */
+	}
+	.custom-option:hover {
+		background-color: #333;
+	}
+	.custom-select.open .custom-options {
+		margin-left: -2px;
+		top: 45px;
+		border-radius: 3px;
+		display: grid;
+	}
+	.custom-select .arrow {
+		width: 24px;
+		height: 24px;
+		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>') no-repeat center;
+		background-size: 48px 36px;
+		/* Tamaño de la flecha */
+		transition: transform 0.3s ease;
+		transform: rotate(180deg);
+		/* Flecha apuntando hacia abajo por defecto */
+	}
+	.custom-select.open .arrow {
+		transform: rotate(0deg);
+		/* Rota la flecha para que apunte hacia arriba cuando el menú está abierto */
+	}
+	.menu-container {
+		position: relative;
+		/* Asegura que el contenido se mantenga dentro de este contenedor */
+	}
+	#episode-count-t1 {
+		top: -34px;
+		left: 12.375em;
+		color: #fff;
+		position: relative;
+	}
+	#episode-count-t2 {
+		top: -34px;
+		left: 12.375em;
+		color: #fff;
+		position: relative;
+	}
+	.season1,
+	.season2,
+	#episode-count-t1,
+	#episode-count-t2 {
+		position: fixed;
+	}
+	}
+
+	#barraestilo {
+    width: 222px;
+    margin: 10px 0;
+    left: 0.6em;
+    border: 0.12em solid rgb(77, 77, 77);
+    position: relative;
+	}
+
+	#clasi3 {
+		left: 20px;
+		position: relative;
+		top: 2.1em;
+		font-size: 14px;
+	}
+	
+	#clasi1 {
+		position: absolute;
+		top: 34.68em; / /* Ajustar la posición en lugar de usar valores negativos */
+		left: 1.5em;
+		font-size: 14px;
+	}
+	
+	#app-modal {
+	z-index: 0;
+	}
+	
+  #modalestilo {
+  width: 80%; /* Ajusta este valor según el tamaño deseado */
+  max-width: 810px; /* O el límite máximo que desees */
+  margin: auto; /* Centra el modal */
+  }
+
+  #veralleps {
+    bottom: 1em;
+    margin-top: 2em;
+    position: relative;
+  }
+
+  #episodiost1 {
+	position: relative;
+    bottom: 4.7em;
+    left: 8.6em;
+    width: 0%;
+    font-size: 14px;
+    margin-bottom: -80px;
+	transform: translateY(0.03em);
+	font-weight: 300;
+  }
+
+  #episodiost2 {
+	position: relative;
+    bottom: 4.7em;
+    left: 8.6em;
+    width: 0%;
+    font-size: 14px;
+    margin-bottom: -80px;
+	transform: translateY(0.03em);
+	font-weight: 300;
+  }
+
+  .contenedor{
+	padding-top: 12px;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo">Tu Logo</div>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Series</li>
-                <li>Películas</li>
-                <li>Mi Lista</li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">SATVMOVIES</div>
+    <div class="description">Las mejores películas, las mejores series</div>
+    <nav>
+      <ul>
+        <li>Inicio</li>
+        <li>Series</li>
+        <li>Películas</li>
+        <li>Mi Lista</li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="main-content">
-        <h1>Destacados</h1>
-        <div class="catalog">
-            <div class="catalog-item">
-                <button class="movie-button" onclick="playMovie('https://www.youtube.com/embed/VIDEO_ID')">
-                    <img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula">
-                </button>
-                <p>Matias Ponce - La Pelicula</p>
-                <video class="trailer-video" loop muted>
-                    <source src="trailer.mp4" type="video/mp4"> <!-- Reemplaza con la ruta de tu propio trailer -->
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-            <!-- Otros elementos del catálogo aquí -->
+  <!-- Catálogo de películas -->
+ <div class="catalog" id="catalog-matiponce">
+  <!-- Item 1: Matías Ponce - La Película -->
+  <div class="catalog-item" id="catalog-matiponcepeli">
+      <img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula" onclick="openModal('matiponcepeli')">
+      <div id="matiponcepeli-modal" class="modal">
+        <div class="modal-content">
+          <div id="dplayer-matiponcepeli"></div>
+<a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+    </svg>
+    Reproducir
+  </a>
+          <div class="synopsis">
+            <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
+          </div>
+		<div class="line" id='clasi1'>
+		   <p style="display: inline;"><a>12+</a>, adolescentes, adultos, delirante</p>
+      </div>
+			<div class="single-line" id='singlelinemati'>
+        <span>Géneros:</span><p style="display: inline;">Humor, hackers, fama, grandes élites, paranoia</p>
+	       </div>
+		   	<div class="single-line" id='singlelinemati2'>
+        <span>Este título es:</span><p style="display: inline;">Original, delirante</p>
+	       </div>
+		      	<div class="single-line" id='singlelinemati3'>
+        <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, <a href="#endOfContent1" class="scroll-to-bottom">más</a></p>
+	       </div>
+		   <h1 class="single-line" id='acerca'>Acerca de Matías Ponce - La Pelicula</h1>
+		   <div class="single-line" id='clasi'>
+		   <span>Clasificación:</span><p style="display: inline;"><a>12+</a>, adolescentes, adultos, lenguaje inapropiado, delirante</p>
+      </div>  
+	  	   <div class="single-line" id='contenido'>
+		   <span>Contiene:</span><p style="display: inline;">Acoso, ciberacoso, hackers, chistes, humor absurdo, eventos y situaciones delirantes</p>
+      </div>
+	  		   <div class="single-line" id='generos'>
+		   <span>Géneros:</span><p style="display: inline;">Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</p>
+      </div>
+	  		   <div class="single-line" id='endOfContent1'>
+		   <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, Indio Ponce, Julieta</p>
+      </div>
+	  <div class='single-line' id='añoserie'> <span>2022</span></div> <div class='single-line' id='numerotemps'> <p>1 h</p></div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <footer>
-        <p>Sol Argentino TV © 2021 - 2024 | Sol Argentino TV MOVIES © 2024</p>
-    </footer>
+    <!-- Item 2: Reite666 -->
+    <div class="catalog-item" id="catalog-reite666">
+      <img src="Logo Reite666 2.png" alt="Reite666" onclick="openModal('reite666')">
+      <div id="reite666-modal" class="modal">
+        <div class="modal-content">
+          <div id="dplayer-reite666"></div>
+                        <a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Series/netflix-video-player/Reite666.html" class="play-link">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+    </svg>
+    Reproducir
+  </a>
+          <div class="synopsis">
+            <p>CILIO, en España, recibe un mensaje que lo obliga a regresar a Argentina para un juego macabro. Un error inesperado desata una serie de eventos perturbadores, llevándolo de vuelta a España de forma extraña.</p>
+          </div>
+		<div class="line" id='clasi3'>
+		   <p style="display: inline;"><a>14+</a>, adolescentes, lenguaje inapropiado</p>
+      </div>
+			<div class="single-line" id='singlelinereite'>
+        <span>Géneros:</span><p style="display: inline;">suspenso, youtubers, hackers, drama, tensión</p>
+	       </div>
+		   	<div class="single-line" id='singlelinereite2'>
+        <span>Este título es:</span><p style="display: inline;">Estilo netflix, tenso</p>
+	       </div>
+		      	<div class="single-line" id='singlelinereite3'>
+        <span>Elenco:</span><p style="display: inline;">Franco Crivera, Julián Iurchuk, Facundo Duré, <a href="#endOfContent" class="scroll-to-bottom">más</a></p>
+	       </div>
+		   <h1 class="single-line" id='acerca'>Acerca de Reite666</h1>
+		   <div class="single-line" id='clasi'>
+		   <span>Clasificación:</span><p style="display: inline;"><a>14+</a>, adolescentes, adultos</p>
+      </div>	  
+	  	   <div class="single-line" id='contenido'>
+		   <span>Contiene:</span><p style="display: inline;">Violencia, acoso, aterrador, ciberacoso, grooming</p>
+      </div>
+	  		   <div class="single-line" id='generos'>
+		   <span>Géneros:</span><p style="display: inline;">Terror, suspenso, psicopatas, youtubers, hackers, drama, tensión</p>
+      </div>
+	  		   <div class="single-line" id='endOfContent'>
+		   <span>Elenco:</span><p style="display: inline;">Franco Crivera, Julián Iurchuk, Facundo Duré, Andrés Ilopo Bollero, Laura Guerra, Marta Guerra</p>
+      </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const movieButtons = document.querySelectorAll('.movie-button');
+	  <div class="dropdown">
+		<button class="dropdown-toggle" id="dropdownMenuButton"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+		  </svg>Temporadas</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+			<div class="contenedor">
+            <a href="#" class="dropdown-item" id='temp1'>Temporada 1</a> <p id='episodiost1'>(20 episodios)</p>
+            <a href="#" class="dropdown-item" id='temp2'>Temporada 2</a> <p id='episodiost2'>(24 episodios)</p>
+			<div id="barraestilo"></div>
+			<a href="#" class="dropdown-item" id='veralleps'> Ver todos los episodios </a>
+        </div>
+	</div>
+    </div>
 
-            movieButtons.forEach(button => {
-                const trailerVideo = button.nextElementSibling; // Elemento de video siguiente al botón
-                button.addEventListener('mouseover', () => {
-                    trailerVideo.style.display = 'block';
-                    trailerVideo.play();
-                    button.style.opacity = 0.5; // Puedes ajustar la opacidad del botón según sea necesario
-                });
+	  <div class='single-line' id='añoserie'> <span>2018</span></div> <div class='single-line' id='numerotemps'> <p>2 Temporadas</p></div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Item 3: Asesinato Para Principiantes -->
+  <div class="catalog-item" id="catalog-app">
+      <img src="THUMBNAIL EL BOSQUE.png" alt="Asesinato Para Principiantes" onclick="openModal('app')">
+	  <div class='contenedor' id='modalestilo'>
+      <div id="app-modal" class="modal">
+        <div class="modal-content">
+		<div class="logo-overlay" style="position: absolute; top: 265px; left: 45px; width: 300px; height: 60px; background-image: url('E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Logo HC.png'); background-size: contain; background-repeat: no-repeat; z-index: 10;"></div>
+		<div class='reprocont' id='reproductor'>
+          <div id="dplayer-app"></div>
+		  </div>
+<a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+    </svg>
+    Reproducir
+  </a>
+          <div class="synopsis">
+            <p>Años después del caso no resuelto de una adolescente texana, que la policía cerró como suicidio, su hermano decide descubrir la verdad y hacer justicia</p>
+          </div>
+		<div class="line" id='clasi1'>
+		   <p style="display: inline;"><a>16+</a>, crímenes, abuso sexual, alcohol, lenguaje inapropiado</p>
+      </div>
+	  <div class='contenedordeitems' id='contenedordatos'>
+			<div class="single-line" id='singlelineapp'>
+        <span>Géneros:</span><p style="display: inline;">Series sobre crimenes, de SKB, de EE.UU</p>
+	       </div>
+		   	<div class="single-line" id='singlelineapp2'>
+        <span>Este título es:</span><p style="display: inline;">escalofriante, retorcido</p>
+	       </div>
+		      	<div class="single-line" id='singlelineapp3'>
+        <span>Elenco:</span><p style="display: inline;">Florence Pugh, Lucas Hedges, Kaitlyn Dever, Matthew McConaughey, Michelle Williams, <a href="#endOfContent2024" class="scroll-to-bottom">más</a></p>
+	       </div>
+		   </div>
+		   <h1 class="single-line" id='acerca'>Acerca de El Bosque</h1>
+		   <div class="single-line" id='clasi'>
+		   <span>Clasificación por edad:</span><p style="display: inline;"><a>16+</a>, crímenes, abuso sexual, alcohol, lenguaje inapropiado</p>
+      </div>  
+	  	   <div class="single-line" id='contenido'>
+		   <span>Contiene:</span><p style="display: inline;">Crímenes, fiestas, texas</p>
+      </div>
+	  		   <div class="single-line" id='generos'>
+		   <span>Géneros:</span><p style="display: inline;">Series sobre crimenes, de SKB, de EE.UU</p>
+      </div>
+	  		   <div class="single-line" id='endOfContent2024'>
+		   <span>Elenco:</span><p style="display: inline;">Florence Pugh, Lucas Hedges, Kaitlyn Dever, Matthew McConaughey, Michelle Williams, Timothée Chalamet, Viola Davis, Aaron Taylor-Johnson, Jacob Elordi, Madelaine Petsch, J.K. Simmons</p>
+      </div>
+	  <div class='single-line' id='añoserie'> <span>2032</span></div> <div class='single-line' id='numerotemps'> <p>10 episodios</p></div>
+        </div>
+      </div>
+  </div>
+  </div>
+  
+  <footer>
+    <h2>Sol Argentino TV © 2021 - 2024 | Sol Argentino TV MOVIES © 2024</h2>
+  </footer>
 
-                button.addEventListener('mouseout', () => {
-                    trailerVideo.pause();
-                    trailerVideo.currentTime = 0;
-                    trailerVideo.style.display = 'none';
-                    button.style.opacity = 1;
-                });
-            });
-        });
-    </script>
+  <!--Script FA-->
+  <script src='https://kit.fontawesome.com/2c36e9b7b1.js' crossorigin='anonymous'></script>
+
+  <!--Script Dropdown-->
+  <script>
+    const toggleButton = document.getElementById('dropdownMenuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    toggleButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Opcional: Cerrar el menú si se hace clic fuera de él
+    window.addEventListener('click', (event) => {
+        if (!toggleButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+  </script>
+  <!-- Scripts para abrir modales y configurar DPlayer -->
+  <script>
+    function openModal(movieId) {
+      const modal = document.getElementById(`${movieId}-modal`);
+      modal.style.display = 'flex';
+
+      let videoUrl = '';
+      if (movieId === 'matiponcepeli') {
+        videoUrl = 'E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/MATIAS PONCE - LA PELÍCULA  TRÁILER OFICIAL 2022.webm';
+      } else if (movieId === 'reite666') {
+        videoUrl = 'E:/Sol Argentino TV - LIBRERIA DE AUDIO/Reite666 - T1 - SATV MOVIES/trailer.mp4';
+      } else if (movieId === 'app') {
+        videoUrl = 'E:/invideo-ai-1080 El Bosque_ La Verdad Oculta 2024-10-04.mp4';
+      }
+      new DPlayer({
+        container: document.getElementById(`dplayer-${movieId}`),
+        video: {
+          url: videoUrl,
+          type: 'auto',
+        },
+        autoplay: true,
+        loop: true,
+        screenshot: false,
+        hotkey: true,
+        preload: 'auto',
+        volume: 1,
+        mutex: true,
+        controls: false,
+      });
+
+      modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          closeModal(movieId);
+        }
+      });
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeModal(movieId);
+        }
+      });
+    }
+
+    function closeModal(movieId) {
+      const modal = document.getElementById(`${movieId}-modal`);
+      modal.style.display = 'none';
+
+      // Detener el video
+      const dpContainer = document.getElementById(`dplayer-${movieId}`);
+      if (dpContainer) {
+        dpContainer.innerHTML = ''; // Limpiar el reproductor
+      }
+    }
+  </script>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const scrollToBottomButton = document.querySelector('.scroll-to-bottom');
+  const modalContent = document.querySelector('.modal-content');
+
+  if (scrollToBottomButton && modalContent) {
+    scrollToBottomButton.addEventListener('click', function(e) {
+      e.preventDefault(); // Evita el comportamiento por defecto del enlace
+
+      // Obtén la posición del elemento con id "endOfContent"
+      const target = document.getElementById('endOfContent');
+      if (target) {
+        // Realiza el desplazamiento suave hacia el objetivo
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+});
+</script>
+
+<script>
+document.querySelector('.season-button').addEventListener('click', function() {
+    var episodeList = document.querySelector('.episodes-list');
+    if (episodeList.style.display === 'block') {
+        episodeList.style.display = 'none';
+    } else {
+        episodeList.style.display = 'block';
+    }
+});
+</script>
+
+<script>
+  const seasonSelect = document.getElementById('season-select');
+  const episodeCount = document.getElementById('episode-count');
+
+  seasonSelect.addEventListener('change', function() {
+    const selectedSeason = seasonSelect.options[seasonSelect.selectedIndex].value;
+    episodeCount.textContent = `${selectedSeason} Episodios`;
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const select = document.querySelector('.custom-select');
+    const options = document.querySelectorAll('.custom-option');
+    const seasons = document.querySelectorAll('.season');
+    
+    // Muestra u oculta el contenido de la temporada seleccionado
+    function showSeason(seasonId) {
+      seasons.forEach(season => {
+        if (season.id === seasonId) {
+          season.style.display = 'block';
+        } else {
+          season.style.display = 'none';
+        }
+      });
+    }
+
+    // Maneja el cambio en el menú desplegable
+    select.addEventListener('click', function() {
+      this.classList.toggle('open');
+    });
+
+    options.forEach(option => {
+      option.addEventListener('click', function() {
+        const value = this.getAttribute('data-value');
+        const selectedOption = this.textContent.trim();
+        document.querySelector('.selected-option').textContent = selectedOption;
+        showSeason(value);
+        select.classList.remove('open');
+      });
+    });
+
+    // Cierra el modal al hacer clic en el botón de cerrar
+    document.querySelector('.close').addEventListener('click', function() {
+      document.getElementById('episodeModal').style.display = 'none';
+    });
+
+    // Abre el modal
+    function openModal() {
+      document.getElementById('episodeModal').style.display = 'block';
+    }
+
+    // Aquí puedes agregar un evento para abrir el modal, por ejemplo:
+    // document.querySelector('.open-modal-button').addEventListener('click', openModal);
+  });
+</script>
+
+<script>
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Escape") {
+    closeModal('app');
+    closeModal('reite666'); // Agregar para Reite666
+  }
+});
+</script>
+
+<script>
+// Suponiendo que ya has creado el reproductor DPlayer
+const dp = new DPlayer({
+    container: document.getElementById('dplayer-container'),
+    // Configuraciones del DPlayer aquí
+});
+
+const audioToggleButton = document.getElementById('audio-toggle-btn');
+
+audioToggleButton.addEventListener('click', () => {
+    if (dp.audio.muted) {
+        dp.audio.muted = false; // Activa el sonido
+        audioToggleButton.setAttribute('aria-label', 'Mutear el audio');
+        // Cambiar ícono a volumen alto
+        audioToggleButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="VolumeHighStandard" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 8.28693 22.525 4.72597 19.8995 2.10046L18.4853 3.51468C20.7357 5.76511 22 8.81736 22 12C22 15.1826 20.7357 18.2348 18.4853 20.4852L19.8995 21.8995C22.525 19.2739 24 15.713 24 12ZM11 3.99995C11 3.59549 10.7564 3.23085 10.3827 3.07607C10.009 2.92129 9.57889 3.00685 9.29289 3.29285L4.58579 7.99995H1C0.447715 7.99995 0 8.44767 0 8.99995V15C0 15.5522 0.447715 16 1 16H4.58579L9.29289 20.7071C9.57889 20.9931 10.009 21.0786 10.3827 20.9238C10.7564 20.7691 11 20.4044 11 20V3.99995ZM5.70711 9.70706L9 6.41417V17.5857L5.70711 14.2928L5.41421 14H5H2V9.99995H5H5.41421L5.70711 9.70706ZM16.0001 12C16.0001 10.4087 15.368 8.88254 14.2428 7.75732L12.8285 9.17154C13.5787 9.92168 14.0001 10.9391 14.0001 12C14.0001 13.0608 13.5787 14.0782 12.8285 14.8284L14.2428 16.2426C15.368 15.1174 16.0001 13.5913 16.0001 12ZM17.0709 4.92889C18.9462 6.80426 19.9998 9.3478 19.9998 12C19.9998 14.6521 18.9462 17.1957 17.0709 19.071L15.6567 17.6568C17.157 16.1565 17.9998 14.1217 17.9998 12C17.9998 9.87823 17.157 7.8434 15.6567 6.34311L17.0709 4.92889Z" fill="currentColor"></path>
+            </svg>`;
+    } else {
+        dp.audio.muted = true; // Silencia el audio
+        audioToggleButton.setAttribute('aria-label', 'Activar el audio');
+        // Cambiar ícono a volumen muteado
+        audioToggleButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="VolumeOffStandard" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3.99995C11 3.59549 10.7564 3.23085 10.3827 3.07607C10.009 2.92129 9.57889 3.00685 9.29289 3.29285L4.58579 7.99995H1C0.447715 7.99995 0 8.44767 0 8.99995V15C0 15.5522 0.447715 16 1 16H4.58579L9.29289 20.7071C9.57889 20.9931 10.009 21.0786 10.3827 20.9238C10.7564 20.7691 11 20.4044 11 20V3.99995ZM5.70711 9.70706L9 6.41417V17.5857L5.70711 14.2928L5.41421 14H5H2V9.99995H5H5.41421L5.70711 9.70706ZM18.8285 12L21.8995 14.071L23.3137 12.6568C22.0284 10.3413 20.5302 8.21714 18.8995 6.41421L17.4853 7.82843L18.8285 12Z" fill="currentColor"></path>
+            </svg>`;
+    }
+});
+</script>
+
 </body>
+
 </html>
