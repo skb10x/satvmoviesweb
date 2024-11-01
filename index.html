@@ -196,7 +196,7 @@
 	transform: translateY(-2.4em);
 	}
 }
-	#singlelinemati {
+	#generos{
     top: 4.5em;
     left: 18em;
     position: relative;
@@ -204,13 +204,13 @@
     margin-left: 12em;
     line-height: 1.2;
 	}
-	#singlelinemati p {
+	#generos p {
 		color: #fff;
 		font-size: 14px;
 		padding: 0px;
 		line-height: 1.2;
 	}
-	#singlelinemati2 {
+	#estetituloes {
 	top: 5.1em;
     left: 18em;
 	position: relative;
@@ -219,13 +219,13 @@
     line-height: 1.2;
 	transform: translateY(0em);
 	}
-	#singlelinemati2 p {
+	#estetituloes{ p {
 		color: #fff;
 		font-size: 14px;
 		padding: 0px;
 		line-height: 1.2;
 	}
-	#singlelinemati3 {
+	#elenco {
     top: -2.2em;
     left: 18em;
     position: relative;
@@ -234,13 +234,13 @@
     line-height: 1.2;
 	transform: translateY(-1em);
 }
-	#singlelinemati3 p {
+	#elenco p {
 		color: #fff;
 		font-size: 14px;
 		padding: 0px;
 		line-height: 1.2;
 	}
-	#singlelinemati3 a {
+	#elenco a {
 		background: transparent;
 		/* Fondo transparente */
 		font-style: italic;
@@ -254,14 +254,14 @@
 		/* Opcional: cambia el cursor al pasar sobre el botón */
 		text-decoration: none;
 	}
-	#singlelinemati3 a:hover {
+	#elenco a:hover {
 		text-decoration: underline;
 		/* Aplica subrayado en hover */
 		text-decoration-color: #fff;
 		/* Color del subrayado en hover */
 	}
 	@supports (-moz-appearance: none) {
-	#singlelinemati {
+	#generos{
     top: 5.7em;
     left: 18em;
     position: relative;
@@ -270,7 +270,7 @@
     line-height: 1.2;
 	transform: translateY(-1em);
 	}
-	#singlelinemati2 {
+	#estetituloes{ {
 	top: 6.2em;
     left: 18em;
 	position: relative;
@@ -279,7 +279,7 @@
     line-height: 1.2;
 	transform: translateY(-1em);
 	}
-	#singlelinemati3 {
+	#elenco {
     top: -2.1em;
     left: 18em;
     position: relative;
@@ -1106,9 +1106,10 @@
   </header>
 
   <!-- Catálogo de películas -->
- <div class="catalog" id="catalog-matiponce">
+ <div class="catalog" id="catalogsatvmovies">
+
   <!-- Item 1: Matías Ponce - La Película -->
-  <div class="catalog-item" id="catalog-matiponcepeli">
+  <div class="catalog-item" id="MatiPoncePeli">
       <img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula" onclick="openModal('matiponcepeli')">
       <div id="matiponcepeli-modal" class="modal">
         <div class="modal-content">
@@ -1125,13 +1126,13 @@
 		<div class="line" id='clasi1'>
 		   <p style="display: inline;"><a>12+</a>, adolescentes, adultos, delirante</p>
       </div>
-			<div class="single-line" id='singlelinemati'>
+			<div class="single-line" id='generos'>
         <span>Géneros:</span><p style="display: inline;">Humor, hackers, fama, grandes élites, paranoia</p>
 	       </div>
-		   	<div class="single-line" id='singlelinemati2'>
+		   	<div class="single-line" id='estetituloes'>
         <span>Este título es:</span><p style="display: inline;">Original, delirante</p>
 	       </div>
-		      	<div class="single-line" id='singlelinemati3'>
+		      	<div class="single-line" id='elenco'>
         <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, <a href="#endOfContent1" class="scroll-to-bottom">más</a></p>
 	       </div>
 
@@ -1155,123 +1156,106 @@
         </div>
       </div>
     </div>
+</div>
+
 
     <!-- Item 2: Reite666 -->
-    <div class="catalog-item" id="catalog-reite666">
-      <img src="Logo Reite666 2.png" alt="Reite666" onclick="openModal('reite666')">
-      <div id="reite666-modal" class="modal">
-        <div class="modal-content">
-          <div id="dplayer-reite666"></div>
-                        <a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Series/netflix-video-player/Reite666.html" class="play-link">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
-    </svg>
-    Reproducir
-  </a>
-          <div class="synopsis">
-            <p>CILIO, en España, recibe un mensaje que lo obliga a regresar a Argentina para un juego macabro. Un error inesperado desata una serie de eventos perturbadores, llevándolo de vuelta a España de forma extraña.</p>
-          </div>
-		<div class="line" id='clasi3'>
-		   <p style="display: inline;"><a>14+</a>, adolescentes, lenguaje inapropiado</p>
-      </div>
-			<div class="single-line" id='singlelinereite'>
-        <span>Géneros:</span><p style="display: inline;">suspenso, youtubers, hackers, drama, tensión</p>
-	       </div>
-		   	<div class="single-line" id='singlelinereite2'>
-        <span>Este título es:</span><p style="display: inline;">Estilo netflix, tenso</p>
-	       </div>
-		      	<div class="single-line" id='singlelinereite3'>
-        <span>Elenco:</span><p style="display: inline;">Franco Crivera, Julián Iurchuk, Facundo Duré, <a href="#endOfContent" class="scroll-to-bottom">más</a></p>
-	       </div>
-
-           <div class="contenedordatosmas">
-		   <h1 class="single-line" id='acerca'>Acerca de Reite666</h1>
-		   <div class="single-line" id='clasi'>
-		   <span>Clasificación:</span><p style="display: inline;"><a>14+</a>, adolescentes, adultos</p>
-      </div>	  
-	  	   <div class="single-line" id='contenido'>
-		   <span>Contiene:</span><p style="display: inline;">Violencia, acoso, aterrador, ciberacoso, grooming</p>
-      </div>
-	  		   <div class="single-line" id='generos'>
-		   <span>Géneros:</span><p style="display: inline;">Terror, suspenso, psicopatas, youtubers, hackers, drama, tensión</p>
-      </div>
-	  		   <div class="single-line" id='endOfContent'>
-		   <span>Elenco:</span><p style="display: inline;">Franco Crivera, Julián Iurchuk, Facundo Duré, Andrés Ilopo Bollero, Laura Guerra, Marta Guerra</p>
-      </div>
-      </div>
-
-	  <div class="dropdown">
-		<button class="dropdown-toggle" id="dropdownMenuButton"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
-		  </svg>Temporadas</button>
-        <div class="dropdown-menu" id="dropdownMenu">
-			<div class="contenedor">
-            <a href="#" class="dropdown-item" id='temp1'>Temporada 1</a> <p id='episodiost1'>(20 episodios)</p>
-            <a href="#" class="dropdown-item" id='temp2'>Temporada 2</a> <p id='episodiost2'>(24 episodios)</p>
-			<div id="barraestilo"></div>
-			<a href="#" class="dropdown-item" id='veralleps'> Ver todos los episodios </a>
-        </div>
-	</div>
-    </div>
-
-	  <div class='single-line' id='añoserie'> <span>2018</span></div> <div class='single-line' id='numerotemps'> <p>2 Temporadas</p></div>
-      </div>
-    </div>
-  </div>
+	<div class="catalog-item" id="Reite666">
+		<img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula" onclick="openModal('matiponcepeli')">
+		<div id="matiponcepeli-modal" class="modal">
+		  <div class="modal-content">
+			<div id="dplayer-matiponcepeli"></div>
+  <a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
+	  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+	  </svg>
+	  Reproducir
+	</a>
+			<div class="synopsis">
+			  <p>CILIO, en España, recibe un mensaje que lo obliga a regresar a Argentina para un juego macabro. Un error inesperado desata una serie de eventos perturbadores, llevándolo de vuelta a España de forma extraña.</p>
+			</div>
+		  <div class="line" id='clasi1'>
+			 <p style="display: inline;"><a>12+</a>, adolescentes, adultos, delirante</p>
+		</div>
+			  <div class="single-line" id='generos'>
+		  <span>Géneros:</span><p style="display: inline;">suspenso, youtubers, hackers, drama, tensión</p>
+			 </div>
+				 <div class="single-line" id='estetituloes'>
+		  <span>Este título es:</span><p style="display: inline;">Estilo netflix, tenso</p>
+			 </div>
+					<div class="single-line" id='elenco'>
+		  <span>Elenco:</span><p style="display: inline;">Franco Crivera, Julián Iurchuk, Facundo Duré, <a href="#endOfContent1" class="scroll-to-bottom">más</a></p>
+			 </div>
   
-    <!-- Item 3: Asesinato Para Principiantes -->
-  <div class="catalog-item" id="catalog-app">
-      <img src="THUMBNAIL EL BOSQUE.png" alt="Asesinato Para Principiantes" onclick="openModal('app')">
-	  <div class='contenedor' id='modalestilo'>
-      <div id="app-modal" class="modal">
-        <div class="modal-content">
-		<div class="logo-overlay" style="position: absolute; top: 265px; left: 45px; width: 300px; height: 60px; background-image: url('E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Logo HC.png'); background-size: contain; background-repeat: no-repeat; z-index: 10;"></div>
-		<div class='reprocont' id='reproductor'>
-          <div id="dplayer-app"></div>
+			 <div class="contenedordatosmas">
+			 <h1 class="single-line" id='acerca'>Acerca de Matías Ponce - La Pelicula</h1>
+			 <div class="single-line" id='clasi'>
+			 <span>Clasificación:</span><p style="display: inline;"><a>12+</a>, adolescentes, adultos, lenguaje inapropiado, delirante</p>
+		</div>  
+			   <div class="single-line" id='contenido'>
+			 <span>Contiene:</span><p style="display: inline;">Acoso, ciberacoso, hackers, chistes, humor absurdo, eventos y situaciones delirantes</p>
+		</div>
+				   <div class="single-line" id='generos'>
+			 <span>Géneros:</span><p style="display: inline;">Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</p>
+		</div>
+				   <div class="single-line" id='endOfContent1'>
+			 <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, Indio Ponce, Julieta</p>
+		</div>
+	  </div>
+  
+		<div class='single-line' id='añoserie'> <span>2018</span></div> <div class='single-line' id='numerotemps'> <p>2 Temporadas</p></div>
 		  </div>
-<a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
-    </svg>
-    Reproducir
-  </a>
-          <div class="synopsis">
-            <p>Años después del caso no resuelto de una adolescente texana, que la policía cerró como suicidio, su hermano decide descubrir la verdad y hacer justicia</p>
-          </div>
-		<div class="line" id='clasi1'>
-		   <p style="display: inline;"><a>16+</a>, crímenes, abuso sexual, alcohol, lenguaje inapropiado</p>
-      </div>
-	  <div class="contenedordatosmas">
-			<div class="single-line" id='singlelineapp'>
-        <span>Géneros:</span><p style="display: inline;">Series sobre crimenes, de SKB, de EE.UU</p>
-	       </div>
-		   	<div class="single-line" id='singlelineapp2'>
-        <span>Este título es:</span><p style="display: inline;">escalofriante, retorcido</p>
-	       </div>
-		      	<div class="single-line" id='singlelineapp3'>
-        <span>Elenco:</span><p style="display: inline;">Florence Pugh, Lucas Hedges, Kaitlyn Dever, Matthew McConaughey, Michelle Williams, <a href="#endOfContent2024" class="scroll-to-bottom">más</a></p>
-	       </div>
-		   </div>
-		   <h1 class="single-line" id='acerca'>Acerca de El Bosque</h1>
-		   <div class="single-line" id='clasi'>
-		   <span>Clasificación por edad:</span><p style="display: inline;"><a>16+</a>, crímenes, abuso sexual, alcohol, lenguaje inapropiado</p>
-      </div>  
-	  	   <div class="single-line" id='contenido'>
-		   <span>Contiene:</span><p style="display: inline;">Crímenes, fiestas, texas</p>
-      </div>
-	  		   <div class="single-line" id='generos'>
-		   <span>Géneros:</span><p style="display: inline;">Series sobre crimenes, de SKB, de EE.UU</p>
-      </div>
-	  		   <div class="single-line" id='endOfContent2024'>
-		   <span>Elenco:</span><p style="display: inline;">Florence Pugh, Lucas Hedges, Kaitlyn Dever, Matthew McConaughey, Michelle Williams, Timothée Chalamet, Viola Davis, Aaron Taylor-Johnson, Jacob Elordi, Madelaine Petsch, J.K. Simmons</p>
-      </div>
-        </div>
+		</div>
+	  </div>
 
-	  <div class='single-line' id='añoseriebosque'> <span>2032</span></div> <div class='single-line' id='numerotempsbosque'> <p>10 episodios</p></div>
-        </div>
-      </div>
-  </div>
-  </div>
+	      <!-- Item 2: NO ABRAS LA PUERTA [Cortometraje] -->
+	<div class="catalog-item" id="NoAbrasLaPuerta">
+		<img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula" onclick="openModal('matiponcepeli')">
+		<div id="matiponcepeli-modal" class="modal">
+		  <div class="modal-content">
+			<div id="dplayer-matiponcepeli"></div>
+  <a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
+	  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+	  </svg>
+	  Reproducir
+	</a>
+			<div class="synopsis">
+			  <p>Estás solo en casa de noche. Alguien desliza un papel por debajo de la entradaen el que pone NO ABRAS LA PUERTA ESTA NOCHE. ¿Qué harías?.</p>
+			</div>
+		  <div class="line" id='clasi1'>
+			 <p style="display: inline;"><a>12+</a>, adolescentes, adultos, delirante</p>
+		</div>
+			  <div class="single-line" id='generos'>
+		  <span>Géneros:</span><p style="display: inline;">suspenso, youtubers, hackers, drama, tensión</p>
+			 </div>
+				 <div class="single-line" id='estetituloes'>
+		  <span>Este título es:</span><p style="display: inline;">Estilo netflix, tenso</p>
+			 </div>
+					<div class="single-line" id='elenco'>
+		  <span>Elenco:</span><p style="display: inline;">Franco Crivera, Julián Iurchuk, Facundo Duré, <a href="#endOfContent1" class="scroll-to-bottom">más</a></p>
+			 </div>
+  
+			 <div class="contenedordatosmas">
+			 <h1 class="single-line" id='acerca'>Acerca de Matías Ponce - La Pelicula</h1>
+			 <div class="single-line" id='clasi'>
+			 <span>Clasificación:</span><p style="display: inline;"><a>12+</a>, adolescentes, adultos, lenguaje inapropiado, delirante</p>
+		</div>  
+			   <div class="single-line" id='contenido'>
+			 <span>Contiene:</span><p style="display: inline;">Acoso, ciberacoso, hackers, chistes, humor absurdo, eventos y situaciones delirantes</p>
+		</div>
+				   <div class="single-line" id='generos'>
+			 <span>Géneros:</span><p style="display: inline;">Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</p>
+		</div>
+				   <div class="single-line" id='endOfContent1'>
+			 <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, Indio Ponce, Julieta</p>
+		</div>
+	  </div>
+  
+		<div class='single-line' id='añoserie'> <span>2024</span></div> <div class='single-line' id='numerotemps'> <p>9m</p></div>
+		  </div>
+		</div>
+	  </div>
   
   <footer>
     <h2>Sol Argentino TV © 2021 - 2024 | Sol Argentino TV MOVIES © 2024</h2>
