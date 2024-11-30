@@ -1106,55 +1106,80 @@
   </header>
 
   <!-- Catálogo de películas -->
- <div class="catalog" id="catalog-matiponce">
-  <!-- Item 1: Matías Ponce - La Película -->
-  <div class="catalog-item" id="catalog-matiponcepeli">
-      <img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula" onclick="openModal('matiponcepeli')">
-      <div id="matiponcepeli-modal" class="modal">
+ <div class="catalog" id="catalogosatvmovies">
+<!-- Item 1: Matías Ponce - La Película -->
+<div class="catalog-item" id="catalog-matiponcepeli">
+    <img src="maxresdefault.jpg" alt="Matias Ponce - La Pelicula" onclick="openModal('matiponcepeli')">
+    <div id="matiponcepeli-modal" class="modal">
         <div class="modal-content">
-          <div id="dplayer-matiponcepeli"></div>
-<a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
-    </svg>
-    Reproducir
-  </a>
-          <div class="synopsis">
-            <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
-          </div>
-		<div class="line" id='clasi1'>
-		   <p style="display: inline;"><a>12+</a>, adolescentes, adultos, delirante</p>
-      </div>
-			<div class="single-line" id='singlelinemati'>
-        <span>Géneros:</span><p style="display: inline;">Humor, hackers, fama, grandes élites, paranoia</p>
-	       </div>
-		   	<div class="single-line" id='singlelinemati2'>
-        <span>Este título es:</span><p style="display: inline;">Original, delirante</p>
-	       </div>
-		      	<div class="single-line" id='singlelinemati3'>
-        <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, <a href="#endOfContent1" class="scroll-to-bottom">más</a></p>
-	       </div>
+            <div id="dplayer-matiponcepeli"></div>
+            <a href="E:/Sol Argentino TV MOVIES - Plataforma Pelis Series/Peliculas/netflix-video-player/matiponcepeli.html" class="play-link">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z"/>
+                </svg>
+                Reproducir
+            </a>
+            
+            <!-- Sinopsis -->
+            <div class="synopsis-container">
+                <div class="synopsis">
+                    <p>Matías Ponce, creador de contenido en redes, se enfrenta a alienígenas y hackers tras la misteriosa suspensión de su canal de youtube, o como el lo llama "Yutun", desatando una hilarante y absurda aventura.</p>
+                </div>
+            </div>
 
-           <div class="contenedordatosmas">
-		   <h1 class="single-line" id='acerca'>Acerca de Matías Ponce - La Pelicula</h1>
-		   <div class="single-line" id='clasi'>
-		   <span>Clasificación:</span><p style="display: inline;"><a>12+</a>, adolescentes, adultos, lenguaje inapropiado, delirante</p>
-      </div>  
-	  	   <div class="single-line" id='contenido'>
-		   <span>Contiene:</span><p style="display: inline;">Acoso, ciberacoso, hackers, chistes, humor absurdo, eventos y situaciones delirantes</p>
-      </div>
-	  		   <div class="single-line" id='generos'>
-		   <span>Géneros:</span><p style="display: inline;">Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</p>
-      </div>
-	  		   <div class="single-line" id='endOfContent1'>
-		   <span>Elenco:</span><p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, Indio Ponce, Julieta</p>
-      </div>
-    </div>
+            <!-- Single-line Mati -->
+            <div class="details-group">
+                <div class="line" id='clasi1'>
+                    <p style="display: inline;"><a>12+</a>, adolescentes, adultos, delirante</p>
+                </div>
+                <div class="single-line" id='singlelinemati'>
+                    <span>Géneros:</span>
+                    <p style="display: inline;">Humor, hackers, fama, grandes élites, paranoia</p>
+                </div>
+                <div class="single-line" id='singlelinemati2'>
+                    <span>Este título es:</span>
+                    <p style="display: inline;">Original, delirante</p>
+                </div>
+                <div class="single-line" id='singlelinemati3'>
+                    <span>Elenco:</span>
+                    <p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, <a href="#endOfContent1" class="scroll-to-bottom">más</a></p>
+                </div>
+            </div>
 
-	  <div class='single-line' id='añoserie'> <span>2022</span></div> <div class='single-line' id='numerotemps'> <p>1 h</p></div>
+            <!-- Año y Duración -->
+            <div class="time-info">
+                <div class='single-line' id='añoserie'>
+                    <span>2022</span>
+                </div>
+                <div class='single-line' id='numerotemps'>
+                    <p>1 h</p>
+                </div>
+            </div>
+
+            <!-- Contenedor Principal -->
+            <div class="details-container">
+                <h1 class="single-line" id='acerca'>Acerca de Matías Ponce - La Pelicula</h1>
+                <div class="single-line" id='clasi'>
+                    <span>Clasificación:</span>
+                    <p style="display: inline;"><a>12+</a>, adolescentes, adultos, lenguaje inapropiado, delirante</p>
+                </div>
+                <div class="single-line" id='contenido'>
+                    <span>Contiene:</span>
+                    <p style="display: inline;">Acoso, ciberacoso, hackers, chistes, humor absurdo, eventos y situaciones delirantes</p>
+                </div>
+                <div class="single-line" id='generos'>
+                    <span>Géneros:</span>
+                    <p style="display: inline;">Humor, humor absurdo, hackers, fama, grandes élites, paranoia, haters, YouTube</p>
+                </div>
+                <div class="single-line" id='endOfContent1'>
+                    <span>Elenco:</span>
+                    <p style="display: inline;">Matias Ponce, Antonella Ponce, Valeria Volpi, Santino Ponce, Indio Ponce, Julieta</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+</div>
+
 
     <!-- Item 2: Reite666 -->
     <div class="catalog-item" id="catalog-reite666">
